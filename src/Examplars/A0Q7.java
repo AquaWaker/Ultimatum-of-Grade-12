@@ -17,8 +17,7 @@ public class A0Q7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // Scanner for system input
-        Scanner input = new Scanner(System.in);
+        
         
         // Tell the user the original population
         System.out.println("In 1999 the Earth's population was 6 billion...");
@@ -27,8 +26,12 @@ public class A0Q7 {
         int year = 1999;
         double population = 6e9;
         
-        for (int i = 0; i < 10; i++) {
-            
+        // Keep multplying for each year until it hits the number 
+        while (population < 1e10){
+            population = population * 1.014;
+            year++;
         }
+        
+        System.out.println("The year that the population will exceed 10 billion is " + year);
     }
 }
